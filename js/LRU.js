@@ -54,7 +54,7 @@ class LRUCache {
     }
 
     const newNode = new Node(key, value);
-    this.map.set(key, value);
+    this.map.set(key, newNode);
     this._addToHead(newNode);
 
     if (this.map.size > this.capacity) {
